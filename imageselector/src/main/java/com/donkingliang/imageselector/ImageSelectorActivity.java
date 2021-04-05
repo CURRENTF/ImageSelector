@@ -113,10 +113,11 @@ public class ImageSelectorActivity extends AppCompatActivity {
      * @param requestCode
      * @param config
      */
-    public static void openActivity(Activity activity, int requestCode, RequestConfig config) {
+    public static Intent openActivity(Activity activity, int requestCode, RequestConfig config) {
         Intent intent = new Intent(activity, ImageSelectorActivity.class);
         intent.putExtra(ImageSelector.KEY_CONFIG, config);
-        activity.startActivityForResult(intent, requestCode);
+//         activity.startActivityForResult(intent, requestCode);
+        return Intent;
     }
 
     /**
@@ -126,10 +127,11 @@ public class ImageSelectorActivity extends AppCompatActivity {
      * @param requestCode
      * @param config
      */
-    public static void openActivity(Fragment fragment, int requestCode, RequestConfig config) {
+    public static Intent openActivity(Fragment fragment, int requestCode, RequestConfig config) {
         Intent intent = new Intent(fragment.getActivity(), ImageSelectorActivity.class);
         intent.putExtra(ImageSelector.KEY_CONFIG, config);
-        fragment.startActivityForResult(intent, requestCode);
+//         fragment.startActivityForResult(intent, requestCode);
+        return intent;
     }
 
     /**
